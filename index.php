@@ -30,10 +30,31 @@
 		echo "<br>";
 
 		// array keyword - associative array
-		$assoc2 = array('1'=>'a', '2'=>'b', '3'=>'c');
+		$assoc2 = array('one'=>'a', 'two'=>'b', 'three'=>'c');
 		echo '$assoc2 = ';
 		print_r($assoc2);
 		echo "<br>";
+
+		// multi dimensional array
+		echo "<br>";
+		$twoD = array(
+			array(1,2,3),
+			array(4,5,6),
+			array(7,8,9)
+		);
+		echo '$twoD = ';
+		print_r($twoD);
+		echo "<br>";
+		$y = 0;
+		foreach($twoD as $oneD){
+			$x = 0;
+			foreach($oneD as $item) {
+				echo("| $x,$y: $item |");
+				$x++;
+			}
+			echo"<br>";
+			$y++;
+		}
 
 		?>
 	</body>
