@@ -42,12 +42,14 @@
 			array(4,5,6),
 			array(7,8,9)
 		);
+		shuffle($twoD);
 		echo '$twoD = ';
 		print_r($twoD);
 		echo "<br>";
 		$y = 0;
 		foreach($twoD as $oneD){
 			$x = 0;
+			shuffle($oneD);
 			foreach($oneD as $item) {
 				echo("| $x,$y: $item |");
 				$x++;
@@ -55,6 +57,21 @@
 			echo"<br>";
 			$y++;
 		}
+
+		// sort example
+		echo '<br>';
+		$arr = array(10,4,100,2,7,1.5,12,1000);
+		echo "unsorted: ";
+		print_r($arr);
+		echo '<br>';
+		sort($arr, SORT_NUMERIC);
+		echo "sorted ascending: ";
+		print_r($arr);
+		echo '<br>';
+		rsort($arr, SORT_NUMERIC);
+		echo "sorted descending: ";
+		print_r($arr);
+		echo '<br>';
 
 		?>
 	</body>
